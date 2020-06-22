@@ -1,7 +1,7 @@
+let num = 16;
 
 
-
-for (let i = 0; i < 256; i++) {
+for (let i = 0; i < num * num; i++) {
 const container = document.querySelector('#container');
 
 const content = document.createElement('div');
@@ -11,31 +11,20 @@ content.classList.add('content');
 container.appendChild(content);
 }
 
-// for (let i = 0; i<16; i++) {
-//     const row = document.querySelector('.content');
+if (num == 64) {
+    container.classList.add('sixtyfour');
+}
 
-//     const nested = document.createElement('div');
-//     nested.classList.add('nested');
 
-//     nested.textContent = 'Hello World';
-//     row.appendChild('nested');
-// }
+const colorChange = document.querySelectorAll('.content');
 
- const colorChange = document.querySelectorAll('.content');
-
- for (let i = 0; i<colorChange.length; i++) {
+for (let i = 0; i<colorChange.length; i++) {
      colorChange[i].addEventListener('mouseover', () => {
         colorChange[i].classList.add('black');
      
      })
  }
 
-//  colorChange.addEventListener('mouseover', () => {
-
-//     colorChange.classList.add('black')
-   
-
-//  });
 
  const btn = document.querySelector('button');
 
@@ -44,3 +33,4 @@ container.appendChild(content);
      colorChange[i].classList.remove('black');
  })
 }
+

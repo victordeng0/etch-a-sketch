@@ -3,7 +3,6 @@
     grid-template-columns: repeat(16, 1fr);
     height: 960px;
     width: 960px;
-    
 }
 
 .content {
@@ -13,9 +12,9 @@
     width: auto;
 }
 
-/* .content:hover {
-    background-color: black;
-} */
+.sixtyfour {
+    grid-template-columns: repeat(64, 1fr) !important;
+}
 
 .black {
     background-color: black;
