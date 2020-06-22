@@ -39,6 +39,8 @@ container.appendChild(content);
 
  const btn = document.querySelector('button');
 
+ for (let i = 0; i<colorChange.length; i++) {
  btn.addEventListener('click', () => {
-     colorChange.classList.remove('black');
+     colorChange[i].classList.remove('black');
  })
+}
