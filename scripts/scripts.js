@@ -6,7 +6,7 @@ const container = document.querySelector('#container');
 
 const content = document.createElement('div');
 content.classList.add('content');
-//content.textContent = 'Hello World';
+
 
 container.appendChild(content);
 }
@@ -16,12 +16,17 @@ if (num == 64) {
 }
 
 
+
+function numberPrompt() {
+    num2 = prompt('How many boxes?');
+}
+
 const colorChange = document.querySelectorAll('.content');
 
 for (let i = 0; i<colorChange.length; i++) {
      colorChange[i].addEventListener('mouseover', () => {
         colorChange[i].classList.add('black');
-     
+        
      })
  }
 
@@ -31,6 +36,32 @@ for (let i = 0; i<colorChange.length; i++) {
  for (let i = 0; i<colorChange.length; i++) {
  btn.addEventListener('click', () => {
      colorChange[i].classList.remove('black');
+     while(container.firstChild) {
+        container.firstChild.remove();     
+    }
+     
  })
 }
+
+btn.addEventListener('click', () => {
+    numberPrompt()
+     for (let j = 0; j < num2 * num2; j++) {
+        const container = document.querySelector('#container');
+        
+        const content = document.createElement('div');
+        content.classList.add('contentx');
+        
+        content.addEventListener('mouseover', () => {
+            content.classList.add('black');
+        })
+        
+        container.appendChild(content);
+        
+        
+        
+        }
+
+})
+
+
 
