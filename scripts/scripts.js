@@ -54,6 +54,8 @@ btn.addEventListener('click', () => {
         content.addEventListener('mouseover', () => {
             content.classList.add('black');
         })
+        document.documentElement.style.setProperty("--colNum", num2)
+        document.documentElement.style.setProperty("--rowNum", num2)
         
         container.appendChild(content);
         
